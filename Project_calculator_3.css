@@ -1,0 +1,41 @@
+#display{
+    height: 50px;
+    width: 250px;
+    border: 2px solid black;
+    margin: 10% 40% 0px;
+    background-color: #f7e8c53d;
+    text-align:end;
+}
+#buttons_part{
+    height: 225px;
+    width: 250px;
+    margin: 0% 545px;
+    border: 1px solid rgb(176, 162, 228);
+    background-image: linear-gradient(rgb(228, 186, 228), rgb(223, 167, 103), rgb(197, 236, 152));
+}
+button{
+    background-color: grey;
+    border-radius: 15px;
+    height: 30px;
+    padding: 0px 10px;
+    width: 44px;
+    margin: 5px 6px 10px 8px;
+    color: white;
+    
+}
+button:hover{
+    border-color: bisque;
+    color: aquamarine;
+    opacity: 0.5;
+    
+}
+
+.restartAndBack{
+    background-color: grey;
+    border-radius: 15px;
+    height: 30px;
+    width: 110px;
+    padding: 0px 10px;
+    margin: 5px 6px 10px 8px;
+    color: white;
+}

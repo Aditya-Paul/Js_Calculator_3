@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator3</title>
+    <link rel = "stylesheet" href = "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="Project_calculator_3.css">
+</head>
+<body>
+    <div id="display"></div>
+    <!-- <input type="text" id="display" value=""></input> -->
+
+    <div id="buttons_part">
+        <div class="d-flex">
+            <button class="digit"  >AC</button>
+            <button class="digit"  >C</button>
+        </div>
+        <div>
+            <button class="digit" >7</button>
+            <button class="digit" >8</button>
+            <button class="digit" >9</button>
+            <button class="digit" >+</button>
+        </div>
+        <div>
+            <button class="digit" >4</button>
+            <button class="digit" >5</button>
+            <button class="digit" >6</button>
+            <button class="digit" >-</button>
+        </div>
+        <div>
+            <button class="digit" >1</button>
+            <button class="digit" >2</button>
+            <button class="digit" >3</button>
+            <button class="digit" >*</button>
+        </div>
+        <div>
+            <button class="digit" >0</button>
+            <button class="digit" >.</button>
+            <button class="digit" >=</button>
+            <button class="digit" >÷</button>
+        </div>
+
+    </div>
+    <script>
+        var display_portion = document.getElementById('display')
+        var ClickTheDigit = document.querySelectorAll(".digit")
+    for (var digits of ClickTheDigit){
+        digits.addEventListener('click', calculator)
+    }
+
+    function calculator(){
+        var digitvalue = this.innerText
+        if(digitvalue == "AC"){
+            display_portion.innerText = ""
+            return;
+        }
+        if(digitvalue == "C"){
+            //1 
+            display_portion.textContent = display_portion.textContent.substr(0, display_portion.textContent.length-1)
+            //2
+            display_portion.innerText = display_portion.innerText.slice(0,display_portion.innerText.length-1);
+            //3
+            display_portion.innerText = display_portion.innerText.slice(0,-1);
+            //all three code working in a same way.use which one do you want
+            return;
+        }
+        if(digitvalue == "="){
+            display_portion.innerText = eval(display_portion.innerText)
+            return;
+        }
+        else{
+            display_portion.innerText += digitvalue
+        }
+    }
+    </script>
+</body>
+</html>
